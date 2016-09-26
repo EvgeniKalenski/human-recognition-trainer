@@ -1,17 +1,15 @@
-import org.opencv.core.Core;
-import org.opencv.core.Mat;
+import org.opencv.core.Core
+import org.opencv.core.Mat
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
+import java.nio.file.Files
 
-import static org.opencv.imgcodecs.Imgcodecs.imread;
+import static java.nio.file.StandardCopyOption.REPLACE_EXISTING
+import static org.opencv.imgcodecs.Imgcodecs.imread
 
 public class Clearing {
 
     static {
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        Runtime.getRuntime().loadLibrary0(GroovyClassLoader.class, Core.NATIVE_LIBRARY_NAME)
     }
 
     public static void main(String[] args) throws IOException {
@@ -19,13 +17,9 @@ public class Clearing {
         File womenData = new File("women/data");
         File trainingFaces = new File("trainingFaces");
         trainingFaces.mkdir();
-        Files.newDirectoryStream( trainingFaces.toPath() ).forEach( file -> {
-            try {
-                Files.delete( file );
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } );
+        trainingFaces.eachFile { it ->
+            it.delete()
+        };
         File ugly = new File("ugly");
         ugly.mkdir();
         outer:
