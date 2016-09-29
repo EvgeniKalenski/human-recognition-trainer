@@ -1,3 +1,5 @@
+package step2
+
 import org.opencv.core.Core
 import org.opencv.core.Mat
 
@@ -6,7 +8,7 @@ import java.nio.file.Files
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING
 import static org.opencv.imgcodecs.Imgcodecs.imread
 
-public class Clearing {
+public class DataCleaner {
 
     static {
         Runtime.getRuntime().loadLibrary0(GroovyClassLoader.class, Core.NATIVE_LIBRARY_NAME)

@@ -1,3 +1,5 @@
+package step1
+
 class FileDownloader {
 
     static void downloadFile(String url, String filePath) {

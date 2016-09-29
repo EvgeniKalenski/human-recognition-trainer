@@ -1,4 +1,6 @@
-class Learning {
+package step1
+
+class DataCollector {
 
     public static final String IMAGE_NET_DOWNLOAD_PATH = 'http://image-net.org/api/text/imagenet.synset.geturls?wnid='
     public static final String WOMEN_ID = 'n10787470'
